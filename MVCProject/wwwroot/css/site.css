@@ -1,0 +1,323 @@
+﻿body {
+    background-image: linear-gradient(45deg, #FC466B, #3F5EFB);
+    font-family: Montserrat, sans-serif;
+}
+.loginForm {
+    height: 250px;
+    text-align: center;
+}
+.deleteButton {
+    position: absolute;
+    width: 50px;
+    right: 1%;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 2%;
+}
+.createClassroomForm {
+    width: 55%;
+}
+.u{
+    padding:5px;
+}
+.usersList {
+    margin: 30px 50px;
+    color: black;
+    text-align: left;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.user {
+    background: transparent;
+    padding: 0.4rem;
+    border: none;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+.grid-item {
+    text-align:center;
+    font-size:20px;
+}
+.backButtons{
+    display: flex;
+}
+.searchForm{
+    height: 3% !important;
+    display: flex;
+    justify-content:end;
+    color:white;
+}
+
+    .searchForm button {
+        margin: 4px;
+        width: 2%;
+        position: absolute;
+    }
+
+a{
+    text-decoration:none;
+    color: white;
+}
+textarea {
+    resize: none;
+    background: transparent;
+    width: 200px;
+    padding: 0.4rem;
+    border: none;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+.classroomButton{
+    display: flex;
+    justify-content: end;
+    margin:2% 3%;
+}
+.classroomButton, .user a {
+    color: #fff;
+    text-align: center;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 100px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 2%;
+    transition: all 0.2s ease-in-out;
+}
+
+.container {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 51%;
+    left: 50%;
+}
+
+.cardContainer {
+    padding: 1em;
+    color: #fff;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    top: 30%;
+    left: 20%;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+}
+.classRoomContainer{
+    color: #fff;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+}
+form{
+    padding: 3em;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+.selectDiv select {
+    width: 500px;
+    background: transparent;
+    border-radius: 5000px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+}
+.selectDiv {
+    display:flex;
+    justify-content: space-between;
+    color: black;
+    background: transparent;
+    border-radius: 5000px;
+}
+.userAddButton{
+    width: 10%;
+    right: 10%;
+}
+input {
+    background: transparent;
+    width: 200px;
+    padding: 0.4rem;
+    border: none;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 5000px;
+    backdrop-filter: blur(5px);
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.radioButton {
+    width: 40px !important;
+}
+.usersButtons a {
+    color: black;
+    text-align: center;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 100px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 2%;
+    transition: all 0.2s ease-in-out;
+}
+
+button {
+    margin-top: 10px;
+    width: 200px;
+    font-size: 1rem;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 2%;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 25px;
+    justify-items: center;
+}
+.row {
+    margin-top: 5rem;
+    background: white;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.navMenu {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.right {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+    .right img {
+        width: 30px;
+    }
+
+.title {
+    display: flex;
+    justify-content: start;
+    position: absolute;
+}
+
+.navMenu a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: inline-block;
+    width: 100px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+    .navMenu a:hover {
+        color: white;
+    }
+
+.navMenu .dot {
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(25px);
+    transform: translateX(25px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(130px);
+    transform: translateX(130px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(255);
+    transform: translateX(255px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}

@@ -1,0 +1,25 @@
+﻿@model MVCProject.Models.Home.LoginVM;
+@{
+    ViewData["Title"] = "Login page";
+}
+<div class="container">
+    <form action="/Home/Login" method="post" class="loginForm">
+        <h1 class="displayContainer">Login</h1>
+        <label>Username</label>
+        @Html.TextBoxFor(u => u.Username, new { placeholder = "Username" })
+        <div class="error">
+            @Html.ValidationMessageFor(u => u.Username)
+        </div>
+        <br />
+        <label>Password</label>
+        @Html.PasswordFor(u => u.Password, new { placeholder = "Password" })
+        <div class="error">
+            @Html.ValidationMessageFor(u => u.Password)
+        </div>
+        @Html.ValidationMessage("authError")
+        <br />
+        <button type="submit">Login</button>
+        <br />
+        <a href="/Student/CreateStudent">You don't have account?</a>
+    </form>
+</div>

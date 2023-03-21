@@ -1,0 +1,28 @@
+﻿@model MVCProject.Models.Classrooms.CreateVM
+@{
+    ViewData["Title"] = "Create Classroom";
+}
+
+<div class="container">
+    <form action="/ClassRoom/CreateClassroom" method="post" class="createClassroomForm">
+        <h1 class="displayContainer">Create Classroom</h1>
+        <div>
+            <label>Theme</label>
+            <br />
+            @Html.TextBoxFor(c => c.Theme, new { placeholder = "Your classroom theme" })
+            <br />
+            @Html.ValidationMessageFor(c => c.Theme)
+        </div>
+        <br />
+        <div>
+            <label>Description</label>
+            <br />
+            @Html.TextAreaFor(c => c.Description, new { placeholder = "Describe your classroom" })
+            <br />
+            @Html.ValidationMessageFor(c => c.Description)
+        </div>
+        <br />
+        <button type="submit">Create Classroom</button>
+        <br />
+    </form>
+</div>

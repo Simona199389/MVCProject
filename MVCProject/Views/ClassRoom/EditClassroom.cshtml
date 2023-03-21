@@ -1,0 +1,32 @@
+﻿@model MVCProject.Models.Classrooms.EditVM
+@{
+    ViewData["Title"] = "Edit Classroom";
+}
+
+<div class="container">
+    <form action="/ClassRoom/EditClassroom" method="post">
+        <div class="backButtons">
+            <a href="/ClassRoom/Index">< Back</a>
+        </div>
+        <h1 class="displayContainer">Edit Classroom</h1>
+        @Html.HiddenFor(c => c.Id)
+        <div>
+            <label>Theme</label>
+            <br />
+            @Html.TextBoxFor(c => c.Theme, new { placeholder = "Your classroom theme" })
+            <br />
+            @Html.ValidationMessageFor(c => c.Theme)
+        </div>
+        <br />
+        <div>
+            <label>Description</label>
+            <br />
+            @Html.TextAreaFor(c => c.Description, new { placeholder = "Describe your classroom" })
+            <br />
+            @Html.ValidationMessageFor(c => c.Description)
+        </div>
+        <br />
+        <button type="submit">Edit Classroom</button>
+        <br />
+    </form>
+</div>

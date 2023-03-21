@@ -1,0 +1,43 @@
+﻿@model MVCProject.Models.Classrooms.ShareClassroomVM
+@{
+    User loggedUser = this.ViewContext.HttpContext.Session.GetObject<User>("loggedUser");
+}
+@using MVCProject.Entities;
+@using MVCProject.Extensions;
+
+<h2>Members in this classroom:</h2>
+<div class="searchForm">
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for users.." title="Type in a name">
+    <button><i class="fa fa-search"></i></button>
+</div>
+@foreach (var share in Model.Shares)
+{
+    <div class="usersList">
+        <div class="u">
+            @share.User.Username - @share.User.FirstName @share.User.LastName
+            @if (share.Classroom.OwnerId == loggedUser.Id)
+            {
+                <a href="/ClassRoom/RevokeShare?id=@share.Id" class="deleteButton">Delete</a>
+            }
+        </div>
+
+    </div>
+}
+
+<script>
+    function searchFunction() {
+        var input, filter, li, a, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementsByClassName("usersList");
+        li = document.getElementsByClassName("u");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].innerText;
+            if (a.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>

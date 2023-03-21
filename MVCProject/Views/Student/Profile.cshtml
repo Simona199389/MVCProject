@@ -1,0 +1,27 @@
+﻿@model MVCProject.Models.Student.ProfileVM
+@{
+    ViewData["Title"] = "Students";
+}
+
+
+@foreach (var item in Model.Items)
+{
+    <div class="cardContainer">
+        <h1>Profile info</h1>
+
+        <div>Name: @item.FirstName @item.LastName</div>
+
+        <div>Specialty: @item.Specialty</div>
+
+        <div>Cours: @item.Cours</div>
+
+        <div>Forma: @item.Forma</div>
+
+        <div class="usersButtons">
+            <a href="/Student/EditStudent?id=@item.Id">Edit</a>
+            <br />
+            <a onclick="return confirm('Do you really want to delete your account?')" href="/Student/Delete?id=@item.Id">Delete</a>
+        </div>
+
+    </div>
+}

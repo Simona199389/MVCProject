@@ -1,0 +1,32 @@
+﻿@model MVCProject.Models.Classrooms.ShareClassroomVM
+@{
+    ViewData["title"] = "Invite users";
+}
+@using MVCProject.Entities;
+@using MVCProject.Extensions;
+@{
+    User loggedUser = this.ViewContext.HttpContext.Session.GetObject<User>("loggedUser");
+}
+
+<div class="searchBar">
+    <h1>Users :</h1>
+    <form action="/ClassRoom/CreateShare" method="post" class="searchForm" style="height: 1%">
+        <div class="selectDiv">
+            @Html.HiddenFor(c => c.ClassroomId)
+            @Html.DropDownListFor(
+             m => m.UserId,
+             Model.Users.Select(u => new SelectListItem()
+             {
+                 Text = u.Username,
+                 Value = u.Id.ToString()
+             })
+     )
+            <div style="display:inline">
+                <input type="submit" value="Add" />
+            </div>
+        </div>
+        
+    </form>
+    <br />
+    <br />
+</div>

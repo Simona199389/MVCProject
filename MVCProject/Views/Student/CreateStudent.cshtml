@@ -1,0 +1,66 @@
+﻿@model MVCProject.Models.Student.CreateStudentVM
+@{
+    ViewData["Title"] = "Create Student";
+}
+
+
+<div class="container">
+    <form action="/Student/CreateStudent" method="post" class="createStudentForm">
+        <h1 class="displayContainer">Create Account</h1>
+        <div>
+            <label>First Name</label>
+            @Html.TextBoxFor(u => u.FirstName, new { placeholder = "First name" })
+            <br />
+            @Html.ValidationMessageFor(u => u.FirstName)
+        </div>
+        <br />
+        <div>
+            <label>Last Name</label>
+            @Html.TextBoxFor(u => u.LastName, new { placeholder = "Last name" })
+            <br />
+            @Html.ValidationMessageFor(u => u.LastName)
+        </div>
+        <br />
+        <div>
+            <label>Username</label>
+            @Html.TextBoxFor(u => u.Username, new { placeholder = "Username" })
+            <br />
+            @Html.ValidationMessageFor(u => u.Username)
+        </div>
+        <br />
+
+        <div>
+            <label>Password</label>
+            @Html.PasswordFor(u => u.Password, new { placeholder = "Password" })
+            <br />
+            @Html.ValidationMessageFor(u => u.Password)
+        </div>
+        <br />
+
+        <div>
+            <label>Redovno</label>
+            @Html.RadioButtonFor(u => u.Forma, "Redovno", new { @class = "radioButton" })
+            <label>Zadochno</label>
+            @Html.RadioButtonFor(u => u.Forma, "Zadochno", new { @class = "radioButton" })
+            <br />
+            @Html.ValidationMessageFor(u => u.Forma)
+        </div>
+        <br />
+        <div>
+            <label>Cours</label>
+            @Html.TextBoxFor(u => u.Cours)
+            <br/>
+            @Html.ValidationMessageFor(u => u.Cours)
+        </div>
+        <br />
+        <div>
+            <label>Specialty</label>
+            @Html.TextBoxFor(u => u.Specialty)
+            <br/>
+            @Html.ValidationMessageFor(u => u.Specialty)
+        </div>
+        <br />
+        <button type="submit">Create Acount</button>
+        <br />
+    </form>
+</div>

@@ -1,0 +1,40 @@
+﻿@model MVCProject.Models.Classrooms.IndexVM
+@using MVCProject.Entities;
+@{
+    ViewData["Title"] = "Classrooms";
+}
+@using MVCProject.Extensions;
+@{
+    User loggedUser = this.ViewContext.HttpContext.Session.GetObject<User>("loggedUser");
+}
+<h2>My classrooms</h2>
+<div class="classroomButton">
+    <a href="/ClassRoom/CreateClassroom">Create your Classroom</a>
+    <br />
+</div>
+
+<div class="grid-container">
+    @foreach (var classroom in Model.classrooms)
+    {
+        <div class="grid-item">
+            <div class="classRoomContainer">
+                <div><h2>@classroom.Theme</h2></div>
+                @if (classroom.OwnerId == loggedUser.Id)
+                {
+                    <div><strong>Owner</strong></div>
+                }
+                <div>@classroom.Description</div>
+                <div class="usersButtons">
+                    <a href="/ClassRoom/Members?id=@classroom.Id">Members</a>
+                    @if (classroom.OwnerId == loggedUser.Id)
+                    {
+                        <a href="/ClassRoom/ShareClassroom?id=@classroom.Id">Share</a>
+                        <a href="/ClassRoom/EditClassroom?id=@classroom.Id">Edit</a>
+                        <a onclick="return confirm('Do you really want to delete your classroom?')" href="/ClassRoom/Delete?id=@classroom.Id">Delete</a>
+                    }
+                    </div>
+            </div>
+        </div>
+    }
+    
+</div>

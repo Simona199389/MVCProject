@@ -1,0 +1,33 @@
+﻿@model MVCProject.Models.Student.EditStudentVM
+@{
+    ViewData["Title"] = "Edit Student";
+}
+
+<div class="container">
+    <form action="/Student/EditStudent" method="post">
+        <h1 class="displayContainer">Edit Student</h1>
+        @Html.HiddenFor(u => u.Id)
+        <label>First Name</label>
+        @Html.TextBoxFor(u => u.FirstName, new { placeholder = "First name" })
+        <br />
+        @Html.ValidationMessageFor(u => u.FirstName)
+        <br />
+        <label>Last Name</label>
+        @Html.TextBoxFor(u => u.LastName, new { placeholder = "Last name" })
+        <br />
+        @Html.ValidationMessageFor(u => u.LastName)
+        <br />
+        <label>Username</label>
+        @Html.TextBoxFor(u => u.Username, new { placeholder = "Username" })
+        <br />
+        @Html.ValidationMessageFor(u => u.Username)
+        <br />
+        <label>Password</label>
+        @Html.PasswordFor(u => u.Password, new { placeholder = "Password" })
+        <br />
+        @Html.ValidationMessageFor(u => u.Password)
+        <br />
+        <button type="submit" href="/Student/Profile">Save Changes</button>
+        <br />
+    </form>
+</div>
